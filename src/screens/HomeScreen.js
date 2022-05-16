@@ -3,16 +3,19 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
 	return <View>
-		<Text style={styles.text}>Hello there!{"\n"}General Kenobi</Text>
-		<Button 
-			onPress={() => navigation.navigate("Components")}
-			title="Go to RS Components"
+		<Text style={styles.text}>Hello there!{'\n'}General Kenobi</Text>
+		<Button	// simple Button
+			onPress={() => navigation.navigate('Components')}
+			title='Go to RS Components'
 		/>
-		<TouchableOpacity onPress={() => navigation.navigate("List")}>
+		<TouchableOpacity onPress={() => navigation.navigate('List')} /* customizable Button */ >	
 			<Text style={styles.button}>Go to Friend List</Text>
 		</TouchableOpacity>
-		<TouchableOpacity onPress={() => navigation.navigate("Image")}>
+		<TouchableOpacity onPress={() => navigation.navigate('Image')}>
 			<Text style={styles.button}>Go to Images</Text>
+		</TouchableOpacity>
+		<TouchableOpacity onPress={() => navigation.navigate('Counter')}>
+			<Text style={styles.button}>Go to Counter</Text>
 		</TouchableOpacity>
 	</View>
 };
@@ -24,7 +27,7 @@ const styles = StyleSheet.create({
 	},
 	button: {
 		fontSize: 20,
-		textAlign: "center",
+		textAlign: 'center',
 		marginVertical: 5,
 	}
 });
